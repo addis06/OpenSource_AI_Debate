@@ -78,22 +78,6 @@ Length-filtered sample: only 42 dev articles were 6,000 tokens or shorter, so th
 Role adherence was inspected qualitatively, not measured across every response.
 Shared model-family biases, possible benchmark contamination, and an artificial information gap limit generalization to real human oversight.
 
-# Repository structure
-.
-├── README.md
-├── CS1998_AI_Debate_Final_Report.pdf   # full write-up
-├── AI_Debate.ipynb                      # complete pilot + main pipeline (Colab)
-├── figures/
-│   └── accuracy.png                     # Figure 1
-└── results/                             # main_v2 outputs
-    ├── results.csv                      # per-question, per-condition judge answers
-    ├── summary.csv                      # accuracy + bootstrap CIs
-    ├── paired_comparisons.csv
-    ├── reversals.csv
-    ├── usage.csv                        # tokens and GPU time per call
-    ├── transcripts.json                 # all expert arguments
-    └── review_cases.json                # randomly sampled disagreements
-	
 
 Reproducibility safeguards built into the pipeline:
 
