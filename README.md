@@ -94,14 +94,6 @@ Shared model-family biases, possible benchmark contamination, and an artificial 
     ├── transcripts.json                 # all expert arguments
     └── review_cases.json                # randomly sampled disagreements
 	
-# Reproducing the results
-
-The notebook is built to be reproducible and resumable on a free Colab GPU.
-
-Open AI_Debate.ipynb in Google Colab and select a T4 GPU runtime.
-Run cell 0A (installs pinned packages), then Runtime → Restart session, then run 0B. Don't continue until 0B prints PASS.
-Run with MODE = 'pilot' first. Review the transcripts, then run the freeze cell (Section 7).
-Set MODE = 'main' and run Sections 1–6. Every generation is checkpointed to Google Drive, so interrupted sessions resume where they stopped.
 
 Reproducibility safeguards built into the pipeline:
 
