@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as software."
+title: "AI Debate with a Weak Judge"
+type: software
+authors:
+  - family-names: Lelgut
+    given-names: Griffins Kiptanui
+  - family-names: Sahle
+    given-names: Addis

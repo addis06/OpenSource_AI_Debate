@@ -1,0 +1,10 @@
+# Model stack pinned to the versions reported for the experiment.
+transformers==4.51.3
+accelerate==1.6.0
+huggingface_hub==0.30.2
+
+# Resolved versions are captured in environment.json for each run.
+numpy
+pandas
+matplotlib
+requests

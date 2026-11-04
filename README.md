@@ -99,3 +99,25 @@ Khan, A., et al. (2024). Debating with More Persuasive LLMs Leads to More Truthf
 Kenton, Z., et al. (2024). On scalable oversight with weak LLMs judging strong LLMs. arXiv:2407.04622
 Pang, R. Y., et al. (2022). QuALITY: Question Answering with Long Input Texts, Yes! NAACL. arXiv:2112.08608
 Qwen Team. Qwen2.5-7B-Instruct and Qwen2.5-1.5B-Instruct model cards.
+
+## Reproducing the experiment
+
+The notebook is designed for Google Colab with a CUDA-capable T4 GPU and Google Drive. It is not currently a local clone-and-run workflow. Model weights are downloaded from Hugging Face at the immutable revisions recorded by the notebook. The QuALITY archive is downloaded from its upstream repository and checked by SHA-256; it is not included here.
+
+1. Open the notebook in Colab and select a T4 GPU runtime.
+2. Run setup cell 0A, restart the runtime, then run cell 0B. The setup uses `requirements-colab.txt`; Colab supplies PyTorch, while `bitsandbytes` is installed separately for the CUDA runtime.
+3. Run the pilot first with `MODE = 'pilot'` and a new `RUN_TAG`. Review the actual pilot transcripts. In the final cell, set `PILOT_REVIEWED = True` and enter your review in `REVIEW_NOTES`, then run that cell to write the freeze record.
+4. Set `MODE = 'main'` with the same `RUN_TAG`, then run the main evaluation. Do not change settings within an existing run directory; use a new tag for a new configuration.
+
+The run directory is created in Google Drive under `MyDrive/CS1998_AI_Debate`. It contains the sample manifest, configuration, environment and model revisions, generation checkpoints, transcripts, result tables, usage data, and plot. The repository currently contains aggregate results in this README, but not the full run artifacts. Before publishing raw transcripts, check the dataset's redistribution terms because transcripts may reproduce source material.
+
+The model stack versions are pinned in `requirements-colab.txt`. The exact versions of the analysis packages and the active Python, PyTorch, CUDA, and GPU runtime are recorded in each run's `environment.json` and checked when resuming.
+
+## Repository files
+
+- `AI_Debate_.ipynb`: experiment setup, pilot, evaluation, and analysis.
+- `requirements-colab.txt`: pinned model-stack dependencies and analysis packages.
+- `CITATION.cff`: citation metadata.
+- `.gitignore`: excludes local caches, downloaded data, and run checkpoints.
+
+No source-code license is included yet. Add one after choosing the terms under which you want others to reuse the code; model and dataset licenses are separate.

@@ -1,0 +1,18 @@
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Runtime data and model artifacts
+/data/
+/models/
+QuALITY.v1.0.1.zip
+main_v*/
+pilot_v*/
+frozen_*.json
