@@ -2,13 +2,13 @@
 
 Using only open-weight models on free hardware, we tested whether letting two AI "experts" debate helps a weaker AI judge pick the right answer to reading-comprehension questions it can't verify on its own. It didn't. Debate scored 57.5%, below the judge working alone (65%). A single expert allowed to choose and defend its own answer scored 82.5%. Debate corrected 0 of 14 of the judge's initial mistakes, while open consultancy corrected 9.
 
-Judge accuracy by condition
+# Judge accuracy by condition
 
-# Why this matters
+Why does this matter?
 
 As AI systems get more capable, the people (or models) overseeing them will increasingly be unable to check answers directly. Debate is one proposed fix for this scalable oversight problem: two experts argue opposite sides, and a weaker judge decides which argument holds up. Prior work (Khan et al., 2024; Kenton et al., 2024) found promising results under certain conditions. We ran a small, fully reproducible version using open-source models (Qwen2.5 7B and 1.5B) on free hardware to see whether a simple prompted debate protocol helps a weak judge. Because the weights are open, anyone can rerun the full experiment at no cost, with no paid APIs.
 
-Research question
+# Research question
 
 Does adversarial debate improve a weak judge's reading-comprehension accuracy compared with unassisted judging and consultancy, under a matched expert-call budget?
 
